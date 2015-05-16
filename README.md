@@ -41,4 +41,14 @@ bundle exec rake db:seed
 bundle exec rake spree_sample:load
 ```
 
+###Start
 
+```
+bundle exec unicorn -p 8080 -c config/unicorn.rb
+```
+
+###View
+
+```
+open http://127.0.0.1:8080/shop
+```
