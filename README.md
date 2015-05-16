@@ -9,6 +9,12 @@ theme applied.
 See config/database.yml.sample for an example
 ```
 
+###Configure Spree Chimpy
+
+```
+Add your mailchimp API key to config/initializers/spree_chimpy.rb
+```
+
 ###Install dependancies
 
 ```
@@ -24,7 +30,7 @@ bundle exec rake db:create
 
 ```
 bundle exec rake db:migrate
-bundle exec rails g spree:auth:install
+bundle exec rake spree_auth:admin:create
 ```
 
 ###Seed data & Load samples
