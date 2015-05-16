@@ -34,7 +34,7 @@ bundle exec rake spree_auth:admin:create
 ```
 
 ###Seed data & Load samples
-(skip this step if you want to ru a clean installation)
+(skip this step if you want to run a clean installation)
 
 ```
 bundle exec rake db:seed
