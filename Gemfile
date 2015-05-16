@@ -50,3 +50,6 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 gem 'spree_paypal_express', :github => "radar/better_spree_paypal_express", :branch => "2-4-stable"
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-4-stable'
+
+# Email management
+gem 'spree_chimpy', github: 'DynamoMTL/spree_chimpy', branch: 'feature/mailchimp-2.0'

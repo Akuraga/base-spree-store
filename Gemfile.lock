@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/DynamoMTL/spree_chimpy.git
+  revision: f00cdf958ac4ea0a3548a15138db5f295a60f2d9
+  branch: feature/mailchimp-2.0
+  specs:
+    spree_chimpy (2.0.0.alpha)
+      mailchimp-api (~> 2.0.5)
+      spree_core (~> 2.1)
+
+GIT
   remote: git://github.com/radar/better_spree_paypal_express.git
   revision: d9a24eb509251c6385cd4d7fb6b43019c4589f01
   branch: 2-4-stable
@@ -9,29 +18,29 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: de188709ffd5879271b1cd9182d5db5c47346f32
+  revision: 7b1ff5c21d932f192b9f3ad8f8d9f843f63c1ccd
   branch: 2-4-stable
   specs:
-    spree (2.4.3.beta)
-      spree_api (= 2.4.3.beta)
-      spree_backend (= 2.4.3.beta)
-      spree_cmd (= 2.4.3.beta)
-      spree_core (= 2.4.3.beta)
-      spree_frontend (= 2.4.3.beta)
-      spree_sample (= 2.4.3.beta)
-    spree_api (2.4.3.beta)
+    spree (2.4.4.beta)
+      spree_api (= 2.4.4.beta)
+      spree_backend (= 2.4.4.beta)
+      spree_cmd (= 2.4.4.beta)
+      spree_core (= 2.4.4.beta)
+      spree_frontend (= 2.4.4.beta)
+      spree_sample (= 2.4.4.beta)
+    spree_api (2.4.4.beta)
       rabl (~> 0.9.4.pre1)
-      spree_core (= 2.4.3.beta)
+      spree_core (= 2.4.4.beta)
       versioncake (~> 2.3.1)
-    spree_backend (2.4.3.beta)
+    spree_backend (2.4.4.beta)
       jquery-rails (~> 3.1.2)
       jquery-ui-rails (~> 5.0.0)
       select2-rails (= 3.5.9.1)
-      spree_api (= 2.4.3.beta)
-      spree_core (= 2.4.3.beta)
-    spree_cmd (2.4.3.beta)
+      spree_api (= 2.4.4.beta)
+      spree_core (= 2.4.4.beta)
+    spree_cmd (2.4.4.beta)
       thor (~> 0.14)
-    spree_core (2.4.3.beta)
+    spree_core (2.4.4.beta)
       activemerchant (~> 1.44.1)
       acts_as_list (~> 0.3)
       awesome_nested_set (~> 3.0.1)
@@ -55,13 +64,13 @@ GIT
       stringex (~> 1.5.1)
       truncate_html (= 0.9.2)
       twitter_cldr (~> 3.0)
-    spree_frontend (2.4.3.beta)
+    spree_frontend (2.4.4.beta)
       canonical-rails (~> 0.0.4)
       jquery-rails (~> 3.1.2)
-      spree_api (= 2.4.3.beta)
-      spree_core (= 2.4.3.beta)
-    spree_sample (2.4.3.beta)
-      spree_core (= 2.4.3.beta)
+      spree_api (= 2.4.4.beta)
+      spree_core (= 2.4.4.beta)
+    spree_sample (2.4.4.beta)
+      spree_core (= 2.4.4.beta)
 
 GIT
   remote: git://github.com/spree/spree_fancy.git
@@ -136,7 +145,7 @@ GEM
       tzinfo (~> 1.1)
     acts_as_list (0.6.0)
       activerecord (>= 3.0)
-    addressable (2.3.6)
+    addressable (2.3.7)
     arel (5.0.1.20140414130214)
     awesome_nested_set (3.0.2)
       activerecord (>= 4.0.0, < 5)
@@ -184,8 +193,9 @@ GEM
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     erubis (2.7.0)
-    execjs (2.2.2)
-    ffaker (1.31.0)
+    excon (0.44.2)
+    execjs (2.3.0)
+    ffaker (1.32.1)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     friendly_id (5.0.5)
@@ -207,18 +217,21 @@ GEM
     jquery-ui-rails (5.0.3)
       railties (>= 3.2.16)
     json (1.8.2)
-    kaminari (0.16.2)
+    kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mailchimp-api (2.0.6)
+      excon (>= 0.16.0)
+      json (>= 1.7.7)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
     monetize (1.1.0)
       money (~> 6.5.0)
-    money (6.5.0)
+    money (6.5.1)
       i18n (>= 0.6.4, <= 0.7.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
@@ -350,6 +363,7 @@ DEPENDENCIES
   sdoc
   spree!
   spree_auth_devise!
+  spree_chimpy!
   spree_fancy!
   spree_gateway!
   spree_paypal_express!
