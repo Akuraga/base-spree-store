@@ -15,8 +15,5 @@
 /log/*.log
 /tmp
 
-#configs
-/config/database.yml
-
 #swp files
 *.swp
