@@ -12,7 +12,9 @@ See config/database.yml.sample for an example
 ###Configure Spree Chimpy
 
 ```
-Add your mailchimp API key to config/initializers/spree_chimpy.rb
+Specify your mailchimp API key to the config.key in config/initializers/spree_chimpy.rb
+or
+Set an environment variable to resolves this configuration: config.key = ENV['MAILCHIMP_API_KEY']
 ```
 
 ###Install dependancies
