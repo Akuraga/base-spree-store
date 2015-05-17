@@ -14,9 +14,9 @@ i.e. export STORE_NAME=base-store-spree
 ###Configure database.yml
 
 ```
-Set
-MYSQL_DB_PASSWORD
-MYSQL_DB_HOST environment variables
+Set the environment variables:
+export MYSQL_DB_PASSWORD=1234qwer
+export MYSQL_DB_HOST=127.0.0.1
 See run.sh script
 ```
 
