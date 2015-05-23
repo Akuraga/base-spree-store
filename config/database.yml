@@ -13,7 +13,7 @@ test:
   database: <%= ENV['STORE_NAME'] %>_test
   pool: 5
   timeout: 5000
-  username: root
+  username: travis
   password: <%= ENV['MYSQL_DB_PASSWORD'] %>
   host: <%= ENV['MYSQL_DB_HOST'] %>
 
