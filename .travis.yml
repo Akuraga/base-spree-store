@@ -6,7 +6,9 @@ before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
   - gem install bundler
 before_script:
-  - bundle exec rake db:create db:migrate
+  - mysql -e 'create database traviscistore_test'
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
 env:
   global:
   - STORE_NAME="traviscistore"
