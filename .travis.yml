@@ -12,5 +12,4 @@ script:
 env:
   global:
   - STORE_NAME="traviscistore"
-  - MYSQL_DB_PASSWORD="1234qwer"
   - MAILCHIMP_API_KEY=2ccd3a737e02e3681d799a276cc848c5-us10
