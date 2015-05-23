@@ -1,4 +1,4 @@
-FROM phusion/passenger-full:0.9.11
+FROM ubuntu:vivid
 MAINTAINER Lorcan O'Flynn <lorcan.oflynn@gmail.com>
 
 RUN sudo apt-get update
