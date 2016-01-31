@@ -17,3 +17,6 @@
 
 #swp files
 *.swp
+
+#public assets dir
+/public/
