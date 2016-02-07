@@ -20,3 +20,9 @@
 
 #public assets dir
 /public/
+
+#dotenv
+.env
+
+#Local gems
+/vendor/ruby

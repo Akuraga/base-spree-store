@@ -3,8 +3,7 @@
 [![Build
 Status](https://travis-ci.org/lorcanoeire/base-spree-store.svg)](https://travis-ci.org/lorcanoeire/base-spree-store)
 
-A base spree store (2-4-stable) with some mailchimp integrations and the spree fancy
-theme applied.
+A base spree store (3-stable) with mailchimp integration
 
 ####Store name
 
@@ -70,4 +69,23 @@ Alternatively modify the run.sh script and run
 
 ```
 open http://127.0.0.1:8080/shop
+```
+
+###QuickStart
+
+```
+export MYSQL_DB_PASSWORD=1234qwer
+export MYSQL_DB_HOST=127.0.0.1
+export MAILCHIMP_API_KEY=X
+
+RAILS_ENV=production bundle exec unicorn -p 8080 -c config/unicorn.rb
+
+```
+
+###DotEnv
+
+Using dotenv to load all required environment variables from a local user .env file, this is .gitignore'd
+```
+ln -s ~/.spreeenv/.env .env
+
 ```

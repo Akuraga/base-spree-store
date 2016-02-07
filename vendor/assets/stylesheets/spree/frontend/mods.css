@@ -1,4 +1,14 @@
 #spree-header {
+    background-image: none;
     background-size: cover;
     margin-bottom: 20px;
+}
+
+#spree-header #header {
+    background: none;
+    padding: 20px 0;
+}
+
+#spree-header #logo img {
+    width: auto;
 }
