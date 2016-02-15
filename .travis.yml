@@ -31,6 +31,10 @@ notifications:
     on_success: always
 
 after_success:
-  — docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  — docker build -t lorcanoeire/base-spree-store:"$TRAVIS_COMMIT" .
-  — docker push lorcanoeire/base-spree-store:"$TRAVIS_COMMIT"
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - export REPO=lorcanoeire/base-spree-store
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - docker build -f Dockerfile -t $REPO:$COMMIT .
+  - docker tag $REPO:$COMMIT $REPO:$TAG
+  - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+  - docker push $REPO
