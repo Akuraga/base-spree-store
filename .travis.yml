@@ -26,11 +26,11 @@ env:
   #Dummy Key
   - MAILCHIMP_API_KEY=2ccd3a737e02e3681d799a276cc848c5-us10
 
-after_success:
-  — ./travis_run.sh docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  — ./travis_run.sh docker build -t lorcanoeire/base-spree-store:$TRAVIS_COMMIT .
-  — ./travis_run.sh /bin/bash docker push lorcanoeire/base-spree-store:$TRAVIS_COMMIT
-
 notifications:
   email:
     on_success: always
+
+after_success:
+  — docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  — docker build -t lorcanoeire/base-spree-store:"$TRAVIS_COMMIT" .
+  — docker push lorcanoeire/base-spree-store:"$TRAVIS_COMMIT"
