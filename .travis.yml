@@ -36,4 +36,4 @@ notifications:
     on_success: always
 
 after_success:
-  - ./docker_trigger.sh
+  - ./docker_trigger.sh "$DOCKER_TRIGGER_TOKEN"
