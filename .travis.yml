@@ -4,6 +4,9 @@ sudo: required
 
 language: ruby
 
+services:
+  - mysql
+
 bundler_args: --without development --path=~/.bundle
 
 rvm:
