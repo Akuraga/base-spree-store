@@ -28,7 +28,7 @@ env:
 
 after_success:
   — ./travis_run.sh docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  — ./travis_run.sh "docker build -t lorcanoeire/base-spree-store:$TRAVIS_COMMIT .
+  — ./travis_run.sh docker build -t lorcanoeire/base-spree-store:$TRAVIS_COMMIT .
   — ./travis_run.sh /bin/bash docker push lorcanoeire/base-spree-store:$TRAVIS_COMMIT
 
 notifications:
