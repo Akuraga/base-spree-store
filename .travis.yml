@@ -22,13 +22,10 @@ env:
   - MAILCHIMP_API_KEY=2ccd3a737e02e3681d799a276cc848c5-us10
 
 after_success:
-  — docker login -e=”$DOCKER_EMAIL” -u=”$DOCKER_USERNAME” -p=”$DOCKER_PASSWORD”
-  — docker build -t “lorcanoeire/base-spree-store:$TRAVIS_COMMIT” .
+  — docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  — docker build -t "lorcanoeire/base-spree-store:$TRAVIS_COMMIT" .
   — docker push lorcanoeire/base-spree-store:$TRAVIS_COMMIT
-  #- docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USER" -p="$DOCKER_PASS"
-  #- export REPO="lorcanoeire/base-spree-store"
-  #— "docker build -t $REPO:$TRAVIS_COMMIT ."
-  #— docker push lorcanoeire/base-spree-store:$TRAVIS_COMMIT
+
 
 notifications:
   email:
