@@ -15,6 +15,32 @@
     <link rel="stylesheet" media="screen" href="/assets/spree/frontend/all.self.css?body=1">
     <link rel="stylesheet" media="screen" href="/assets/spree/frontend/mods.self.css?body=1">
     <link rel="stylesheet" media="screen" href="/assets/spree/frontend/one-page-wonder.self.css?body=1">
+    <script src="/assets/jquery.self.js?body=1"></script>
+    <script src="/assets/jquery_ujs.self.js?body=1"></script>
+    <script src="/assets/bootstrap/affix.self.js?body=1"></script>
+    <script src="/assets/bootstrap/alert.self.js?body=1"></script>
+    <script src="/assets/bootstrap/button.self.js?body=1"></script>
+    <script src="/assets/bootstrap/carousel.self.js?body=1"></script>
+    <script src="/assets/bootstrap/collapse.self.js?body=1"></script>
+    <script src="/assets/bootstrap/dropdown.self.js?body=1"></script>
+    <script src="/assets/bootstrap/modal.self.js?body=1"></script>
+    <script src="/assets/bootstrap/scrollspy.self.js?body=1"></script>
+    <script src="/assets/bootstrap/tab.self.js?body=1"></script>
+    <script src="/assets/bootstrap/transition.self.js?body=1"></script>
+    <script src="/assets/bootstrap/tooltip.self.js?body=1"></script>
+    <script src="/assets/bootstrap/popover.self.js?body=1"></script>
+    <script src="/assets/bootstrap-sprockets.self.js?body=1"></script>
+    <script src="/assets/jquery.validate/jquery.validate.min.self.js?body=1"></script>
+    <script src="/assets/jsuri.self.js?body=1"></script>
+    <script src="/assets/spree.self.js?body=1"></script>
+    <script src="/assets/spree/frontend/cart.self.js?body=1"></script>
+    <script src="/assets/jquery.payment.self.js?body=1"></script>
+    <script src="/assets/spree/frontend/checkout.self.js?body=1"></script>
+    <script src="/assets/spree/frontend/checkout/address.self.js?body=1"></script>
+    <script src="/assets/spree/frontend/checkout/payment.self.js?body=1"></script>
+    <script src="/assets/spree/frontend/product.self.js?body=1"></script>
+    <script src="/assets/spree/frontend.self.js?body=1"></script>
+    <script src="/assets/spree/frontend/all.self.js?body=1"></script>
   </head>
 <body>
 
@@ -26,26 +52,24 @@
             <a href="/shop/"><img src="/assets/logo/spree_50.png" alt="Spree 50"></a>
           </figure>
           <nav class="navbar col-md-8" id="top-nav-bar">
-    <ul id="nav-bar" class="nav navbar-nav navbar-right" data-hook="">
-    <li id="link-to-login"><a href="/shop/login">Login</a></li>
-  <li id="search-bar" data-hook="">
-
-  <form class="navbar-form" action="/shop/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-    <div class="form-group">
-        <select name="taxon" id="taxon" aria-label="Taxon" class="form-control"><option value="">All departments</option>
-  <option value="1">Tags</option>
-  <option value="5">Categories</option>
-  <option value="6">Brand</option></select>
-    </div>
-    <div class="form-group">
-      <input type="search" name="keywords" id="keywords" placeholder="Search" class="form-control">
-    </div>
-    <input type="submit" value="Search" class="btn btn-success">
-  </form>
-      </li>
-    </ul>
-  </nav>
-
+            <ul id="nav-bar" class="nav navbar-nav navbar-right" data-hook="">
+              <li id="link-to-login"><a href="/shop/login">Login</a></li>
+              <li id="search-bar" data-hook="">
+              <form class="navbar-form" action="/shop/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+                <div class="form-group">
+                  <select name="taxon" id="taxon" aria-label="Taxon" class="form-control"><option value="">All departments</option>
+                    <option value="1">Tags</option>
+                    <option value="5">Categories</option>
+                    <option value="6">Brand</option></select>
+                </div>
+                <div class="form-group">
+                  <input type="search" name="keywords" id="keywords" placeholder="Search" class="form-control">
+                </div>
+                <input type="submit" value="Search" class="btn btn-success">
+              </form>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -54,13 +78,17 @@
     <div id="main-nav-bar" class="navbar">
       <ul class="nav navbar-nav" data-hook="">
         <li id="home-page-link" data-hook="">
-  <a href="/">Home</a><a></a>
-  </li>
-  <li id="home-link" data-hook=""><a href="/shop/">Shop</a></li>
+          <a href="/">Home</a><a></a>
+        </li>
+        <li id="home-link" data-hook=""><a href="/shop/">Shop</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" data-hook="">
-        <li id="link-to-cart" data-hook=""><a class="cart-info full" href="/shop/cart">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Cart: (1)  <span class="amount">$22.99</span></a></li>
+        <li id="link-to-cart" data-hook="">
+          <noscript>
+            <%= link_to Spree.t(:cart), '/cart' %>
+          </noscript>
+          <script>Spree.fetch_cart()</script>
+        </li>
       </ul>
     </div>
   </nav>
@@ -126,12 +154,6 @@
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

@@ -5,7 +5,7 @@ Status](https://travis-ci.org/lorcanoeire/base-spree-store.svg)](https://travis-
 
 A base spree store (3-stable) with mailchimp integration
 
-####Store name
+#### Store name
 
 ```
 It is required for configuration purposes that a store name is set. See
@@ -13,7 +13,7 @@ the run.sh script or set the STORE_NAME environment variable
 i.e. export STORE_NAME=base-store-spree
 ```
 
-###Configure database.yml
+### Configure database.yml
 
 ```
 Set the environment variables:
@@ -22,32 +22,32 @@ export MYSQL_DB_HOST=127.0.0.1
 See run.sh script
 ```
 
-###Configure Spree Chimpy
+### Configure Spree Chimpy
 
 ```
 Set an environment variable to resolves the configuration: config.key = ENV['MAILCHIMP_API_KEY']
 This is set in config/initializers/spree_chimpy.rb
 ```
 
-###Install dependancies
+### Install dependancies
 
 ```
 bundle update
 ```
 
-###Create Database
+### Create Database
 ```
 bundle exec rake db:create
 ```
 
-###Run Migrations & Create admin user
+### Run Migrations & Create admin user
 
 ```
 bundle exec rake db:migrate
 bundle exec rake spree_auth:admin:create
 ```
 
-###Seed data & Load samples
+### Seed data & Load samples
 (skip this step if you want to run a clean installation)
 
 ```
@@ -55,7 +55,7 @@ bundle exec rake db:seed
 bundle exec rake spree_sample:load
 ```
 
-###Start
+### Start
 
 ```
 If all environment variables are set run
@@ -65,7 +65,7 @@ Alternatively modify the run.sh script and run
 ./run.sh
 ```
 
-###View
+### View
 
 ```
 open http://127.0.0.1:8080/shop
@@ -79,6 +79,10 @@ export MYSQL_DB_HOST=127.0.0.1
 export MAILCHIMP_API_KEY=X
 
 RAILS_ENV=production bundle exec unicorn -p 8080 -c config/unicorn.rb
+
+or
+
+./go start:development
 
 ```
 
