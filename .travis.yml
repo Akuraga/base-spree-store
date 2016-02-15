@@ -2,6 +2,10 @@ sudo: required
 
 language: ruby
 
+services:
+  - mysql
+  - docker
+
 bundler_args: --without development --path=~/.bundle
 
 rvm:
@@ -16,9 +20,6 @@ before_script:
 
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
-
-services:
-  - docker
 
 env:
   global:
