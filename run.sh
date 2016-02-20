@@ -64,9 +64,9 @@ if [ "$BOOTSTRAP" == "True" ]; then
 else
   echo "Established instance, skipping bootstrap tasks..."
   echo "Running migrations..."
-  RAILS_ENV=$MODE bundle exec rake db:migrate
+  RAILS_ENV="$MODE" bundle exec rake db:migrate
   echo "Compiling assets"
-  RAILS_ENV=$MODE bundle exec rake assets:precompile
+  RAILS_ENV="$MODE" bundle exec rake assets:precompile
 
 fi
 
