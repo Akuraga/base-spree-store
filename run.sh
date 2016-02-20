@@ -2,7 +2,8 @@
 
 if [ -z "$MAILCHIMP_API_KEY" ]; then
 	echo "Using default for MAILCHIMP_API_KEY"
-  export MAILCHIMP_API_KEY=dummykeygoeshere
+  #DUMMY KEY
+  export MAILCHIMP_API_KEY=2ccd3a737e0232723af024235799c848c5-us10
 fi
 
 if [ -z "$MYSQL_DB_PASSWORD" ]; then
