@@ -47,17 +47,24 @@ if [ -z "$APP_PORT" ]; then
 fi
 
 if [ "$BOOTSTRAP" = "true" ]; then
-
+  echo "Running bootstrap tasks..."
+  echo "Dropping old database..."
   RAILS_ENV={{ mode }} bundle exec rake db:drop
+  echo "Creating new database..."
   RAILS_ENV={{ mode }} bundle exec rake db:create
+  echo "Running migrations..."
   RAILS_ENV={{ mode }} bundle exec rake db:migrate
+  echo "Compiling assets"
   RAILS_ENV={{ mode }} bundle exec rake assets:precompile
 
 else
-
+  echo "Established instance, skipping bootstrap tasks..."
+  echo "Running migrations..."
   RAILS_ENV={{ mode }} bundle exec rake db:migrate
+  echo "Compiling assets"
   RAILS_ENV={{ mode }} bundle exec rake assets:precompile
 
 fi
 
+echo "Starting application..."
 cd /home/$DOCKER_USER/$STORE_APP_ROOT && RAILS_ENV=$MODE bundle exec unicorn -p $APP_PORT -c config/unicorn.rb
