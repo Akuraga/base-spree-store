@@ -49,20 +49,20 @@ fi
 if [ "$BOOTSTRAP" = "true" ]; then
   echo "Running bootstrap tasks..."
   echo "Dropping old database..."
-  RAILS_ENV={{ mode }} bundle exec rake db:drop
+  RAILS_ENV=$MODE bundle exec rake db:drop
   echo "Creating new database..."
-  RAILS_ENV={{ mode }} bundle exec rake db:create
+  RAILS_ENV=$MODE bundle exec rake db:create
   echo "Running migrations..."
-  RAILS_ENV={{ mode }} bundle exec rake db:migrate
+  RAILS_ENV=$MODE bundle exec rake db:migrate
   echo "Compiling assets"
-  RAILS_ENV={{ mode }} bundle exec rake assets:precompile
+  RAILS_ENV=$MODE bundle exec rake assets:precompile
 
 else
   echo "Established instance, skipping bootstrap tasks..."
   echo "Running migrations..."
-  RAILS_ENV={{ mode }} bundle exec rake db:migrate
+  RAILS_ENV=$MODE bundle exec rake db:migrate
   echo "Compiling assets"
-  RAILS_ENV={{ mode }} bundle exec rake assets:precompile
+  RAILS_ENV=$MODE bundle exec rake assets:precompile
 
 fi
 
