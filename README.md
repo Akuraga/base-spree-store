@@ -60,9 +60,6 @@ bundle exec rake spree_sample:load
 ```
 If all environment variables are set run
 bundle exec unicorn -p 8080 -c config/unicorn.rb
-
-Alternatively modify the run.sh script and run
-./run.sh
 ```
 
 ### View
