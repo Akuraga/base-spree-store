@@ -19,11 +19,15 @@ fi
 if [ -z "$STORE_NAME" ]; then
 	echo "Using default for STORE_NAME"
   export STORE_NAME=store
+else
+	echo "Using $STORE_NAME for STORE_NAME"
 fi
 
 if [ -z "$MODE" ]; then
 	echo "Using default for MODE"
   export MODE=development
+else
+	echo "Running application in $MODE mode..."
 fi
 
 if [ -z "$DOCKER_USER" ]; then
@@ -41,12 +45,12 @@ if [ -z "$APP_PORT" ]; then
   export APP_PORT=8080
 fi
 
-if [ -z "$APP_PORT" ]; then
-	echo "Running in bootstrap mode"
+if [ -z "$BOOTSTRAP" ]; then
+	echo "Will now run in bootstrap mode..."
   export BOOTSTRAP=true
 fi
 
-if [ "$BOOTSTRAP" = "true" ]; then
+if [ "$BOOTSTRAP" == "true" ]; then
   echo "Running bootstrap tasks..."
   echo "Dropping old database..."
   RAILS_ENV=$MODE bundle exec rake db:drop
