@@ -71,7 +71,7 @@ Alternatively modify the run.sh script and run
 open http://127.0.0.1:8080/shop
 ```
 
-###QuickStart
+### QuickStart
 
 ```
 export MYSQL_DB_PASSWORD=1234qwer
@@ -86,7 +86,7 @@ or
 
 ```
 
-###DotEnv
+### DotEnv
 
 Using dotenv to load all required environment variables from a local user .env file, this is .gitignore'd
 ```
