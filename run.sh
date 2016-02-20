@@ -50,7 +50,7 @@ if [ -z "$BOOTSTRAP" ]; then
   export BOOTSTRAP=true
 fi
 
-if [ "$BOOTSTRAP" == "true" ]; then
+if [ "$BOOTSTRAP" == "True" ]; then
   echo "Running bootstrap tasks..."
   echo "Dropping old database..."
   RAILS_ENV=$MODE bundle exec rake db:drop
