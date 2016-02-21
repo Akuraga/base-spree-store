@@ -54,3 +54,6 @@ gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :bran
 
 # Email management
 gem 'spree_chimpy', github: 'DynamoMTL/spree_chimpy', branch: '3-stable'
+
+# Static content
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-0-stable'

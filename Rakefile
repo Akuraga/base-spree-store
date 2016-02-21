@@ -22,24 +22,6 @@ namespace :start do
 
 end
 
-namespace :db do
-  desc "Start app in test mode"
-  task :test => [:check_environment, :set_test, :environment] do
-    run_unicorn(Rails.env)
-  end
-
-  desc "Start app in development mode"
-  task :development => [:check_environment, :set_development, :environment] do
-    run_unicorn(Rails.env)
-  end
-
-  desc "Start app in production mode"
-  task :prod => [:check_environment, :set_production, :environment] do
-    run_unicorn(Rails.env)
-  end
-
-end
-
 namespace :assets do
   desc 'compile assets'
   task :compile => [:compile_js, :compile_css] do

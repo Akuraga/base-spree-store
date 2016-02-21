@@ -19,7 +19,8 @@
 *.swp
 
 #public assets dir
-/public/
+public/assets/*
+public/spree/*
 
 #dotenv
 .env
