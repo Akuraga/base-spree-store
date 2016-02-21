@@ -80,5 +80,5 @@ task :set_production do
 end
 
 def run_unicorn (rails_env)
-    system "RAILS_ENV=#{rails_env} bundle exec unicorn -p 8080 -c config/unicorn.rb"
+    system "RAILS_ENV=#{rails_env} bundle exec unicorn_rails -p 8080 -c config/unicorn.rb"
 end
