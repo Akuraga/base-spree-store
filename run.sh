@@ -50,6 +50,16 @@ if [ -z "$BOOTSTRAP" ]; then
   export BOOTSTRAP=true
 fi
 
+if [ -z "$ADMIN_EMAIL" ]; then
+	echo "Using the default admin email credentials as none are specified"
+  export ADMIN_EMAIL=spree@example.com
+fi
+
+if [ -z "$ADMIN_PASSWORD" ]; then
+	echo "Using the default admin email credentials as none are specified"
+  export ADMIN_PASSWORD=1234qwer
+fi
+
 if [ "$BOOTSTRAP" == "True" ]; then
   echo "Running bootstrap tasks..."
   echo "Dropping old database..."
@@ -58,6 +68,8 @@ if [ "$BOOTSTRAP" == "True" ]; then
   RAILS_ENV=$MODE bundle exec rake db:create
   echo "Running migrations..."
   RAILS_ENV=$MODE bundle exec rake db:migrate
+	echo "Installing the Admin user..."
+	AUTO_ACCEPT=true ADMIN_EMAIL=$ADMIN_EMAIL ADMIN_PASSWORD=$ADMIN_PASSWORD RAILS_ENV=$MODE bundle exec rake spree_auth:admin:create
   echo "Compiling assets"
   RAILS_ENV=$MODE bundle exec rake assets:precompile
 
