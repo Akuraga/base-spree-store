@@ -83,4 +83,4 @@ else
 fi
 
 echo "Starting application..."
-cd /home/$DOCKER_USER/$STORE_APP_ROOT && RAILS_ENV=$MODE bundle exec unicorn -p $APP_PORT -c config/unicorn.rb
+cd /home/$DOCKER_USER/$STORE_APP_ROOT && RAILS_ENV=$MODE bundle exec unicorn_rails -p $APP_PORT -c config/unicorn.rb
