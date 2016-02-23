@@ -9,3 +9,6 @@
 //= require spree/frontend
 
 //= require_tree .
+//= require spree/frontend/spree_wishlist
+//= require spree/product_zoom
+//= require spree/frontend/spree_reviews

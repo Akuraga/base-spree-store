@@ -3,7 +3,21 @@
 [![Build
 Status](https://travis-ci.org/lorcanoeire/base-spree-store.svg)](https://travis-ci.org/lorcanoeire/base-spree-store)
 
-A base spree store (3-stable) with spree_paypal_express, spree_chimpy, spree_static_content, travis-ci, Dockerfile + run script.
+A base spree store (3-0-stable) with:
+
+Extensions:
+* spree_paypal_express
+* spree_chimpy
+* spree_static_content
+* spree_email_to_friend
+* spree_wishlist
+* spree_product_zoom
+* spree_reviews
+* spree_related_products
+
+Extras:
+* travis-ci (ci integration)
+* Dockerfile + run script
 
 ### Environment variables
 

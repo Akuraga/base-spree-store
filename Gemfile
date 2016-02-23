@@ -52,8 +52,12 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 gem 'spree_paypal_express', :github => "radar/better_spree_paypal_express", :branch => "3-0-stable"
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '3-0-stable'
 
-# Email management
+# Extensions
 gem 'spree_chimpy', github: 'DynamoMTL/spree_chimpy', branch: '3-stable'
-
-# Static content
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-0-stable'
+gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', :branch => '3-0-stable'
+gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', :branch => '3-0-stable'
+gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git", :branch => '3-0-stable'
+
+gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: 'master', :branch => '3-0-stable'
+gem 'spree_related_products', github: 'spree-contrib/spree_related_products', :branch => '3-0-stable'

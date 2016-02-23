@@ -55,7 +55,7 @@ if [ -z "$SPREE_LOAD_SAMPLE" ]; then
   export SPREE_LOAD_SAMPLE=true
 fi
 
-if [ "$BOOTSTRAP" == "True" ]; then
+if [ "$BOOTSTRAP" == "True" ] || [ "$BOOTSTRAP" == "true" ]; then
   echo "Running bootstrap tasks..."
   echo "Dropping old database..."
   RAILS_ENV=$MODE bundle exec rake db:drop
@@ -67,7 +67,7 @@ if [ "$BOOTSTRAP" == "True" ]; then
   echo "Seeding some default data..."
 	AUTO_ACCEPT=true RAILS_ENV=$MODE bundle exec rake db:seed
 
-	if [ "$SPREE_LOAD_SAMPLE" == "True" ]; then
+	if [ "$SPREE_LOAD_SAMPLE" == "True" ] || [ "$SPREE_LOAD_SAMPLE" == "true" ] ; then
 		echo "Loading sample data..."
 		RAILS_ENV=$MODE bundle exec rake spree_sample:load
 	fi
